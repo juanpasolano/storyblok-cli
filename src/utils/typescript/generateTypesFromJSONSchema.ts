@@ -408,10 +408,11 @@ export class GenerateTypesFromJSONSchemas {
       case "datetime":
       case "image":
       case "markdown":
-      case "number":
       case "text":
       case "textarea":
         return { type: "string" };
+      case "number":
+        return { type: "number" };
       default:
         return { type: "any" };
     }
